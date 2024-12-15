@@ -1,0 +1,231 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Dr.Lzw
+subtitle: ''
+description: 
+keywords:
+author: Dr.Lzw
+language: 
+  - zh-cn
+  - en
+timezone: ''
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://lzwnb.github.io/project_1/
+root: /project_1/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: true
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: arknights 
+theme_config:
+# canvas 动态背景
+canvas_dust: true
+
+# 默认颜色模式 dark / light / auto
+# dark 暗色模式
+# light 亮色模式
+# auto 跟随系统
+color: dark
+
+# <body> 背景图片链接
+background_image:
+  dark: https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg  # 暗色模式
+  light: /img/bk.jpg # 亮色模式
+
+# 导航栏
+menu:
+  Home: ''
+  # About: about/
+  # Contact: contact/
+  Archives: archives/
+
+# 侧边栏
+aside:
+  in_left: false # 侧边栏在左 true / false
+  logo: https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png #图片链接，建议 1:1 比例
+  dr: / # 侧边栏 Dr. 链接
+  icp: # ICP 备案号，与版权声明相同，但会链接到 https://beian.miit.gov.cn/
+  copyright: # 版权声明、备案号等，可自定义键值，不想显示则留空
+
+# post 文章页面配置；true / false
+post:
+  date: true # 是否显示发布日期
+  updated: true # 是否显示修改日期
+  excerpt: true # 是否在文章中显示摘要内容（<!-- more--> 以上的内容）
+  # 文章末显示打赏二维码
+  reward:
+      Wechat: img/WeChat.png
+      Alipay: img/Alipay.png
+    # 支付宝 | Alipay: img/Alipay.png
+    # 微信 | Wechat: img/WeChat.png
+  # 以下两项依赖 hexo-wordcount，请参阅 README 开启
+  count: false # 是否显示字数统计
+  time: false # 是否显示预计阅读时长
+
+# 文章内目录
+toc:
+  list_number: true # true / false ；是否显示编号
+  max_depth: 6 # 最大目录深度
+  min_depth: 1 # 最小目录深度
+
+# 归档页
+archives:
+  categories_count: true # 是否显示分类总数
+  tags_count: true # 是否显示标签总数
+
+# 搜索
+search:
+  enable: true
+  content: true # 若为 false，仅可搜索标题及 metadata
+  preload: false # 自动加载搜索数据
+  # 设为 post 时，仅可搜索 post 页面
+  # 设为 page 时，仅可搜索非 post 页面
+  # 设为 all 时，可搜索全部页面
+  field: post
+  # 设为 html 时，依据 html 文件生成
+  # 设为 striptags 时，滤除 html tag
+  # 设为 raw 时，依据 markdown 源文件生成
+  format: striptags
+
+# Valine
+# 详见 https://valine.js.org
+valine:
+  enable: true
+  app_id: WghCZWnhex02x3oKdpIKoES9-gzGzoHsz
+  app_key: Aie0UsdoEB2pnJ1jyfvqVIEd
+  server_url: # APP DOMAIN（LeanCloud 国际版）
+
+# gitalk
+# 详见 https://github.com/gitalk/gitalk
+gitalk:
+  enable: false
+  client_id: # GitHub 应用 Client ID
+  client_secret: # GitHub 应用 Client Secret
+  repo: # 用于存放评论数据的 GitHub 仓库
+  owner: # 该 GitHub 仓库所有者
+  admin: [] # 具有写该 GitHub 仓库权限的用户，例如: [adminA,adminB]
+  id: # (可选) 页面的唯一标识，例如: location.pathname
+
+# Waline
+# 详情: https://waline.js.org/
+waline:
+  enable: false 
+  server_url: #Server_Url
+
+# 图表支持
+mermaid:
+  enable: true
+  version: '9.2.2'
+
+# pjax 支持
+pjax:
+  enable: true
+
+# 公式前端渲染
+mathjax:
+  enable: false
+  version: '2.6.1'
+    
+
+
+
+# 在 `<head>` 标签内引入 CSS 样式表
+stylesheets:
+
+# 在 `<body>` 尾部引入 JavaScript 脚本
+scripts:
+
+
+
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  - type: 'git'
+    repo: https://github.com/LZWNB/project_1.git
+    branch: master
+    
